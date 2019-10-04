@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+		<meta lang="es">
+		<meta name="description" content="Resumen del contenido"> 
+		<meta name="description" content="Free Web tutorials">
+  		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  		<meta name="author" content="Juan Carlos">
+	<title></title>
+	<style type="text/css">
+		div {
+			background-color: yellow;
+			width: 200px;
+			height: 50px;
+			text-align: center;
+		}
+	</style>
+	<!-- libreria JQuery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		function metodoJS() {
+			//crear el objeto /nodo que queremos insertar
+			var nuevoNodo = document.createElement('input');//crea nodo
+			//informar atributos
+			nuevoNodo.setAttribute('type','number');//asigna atributos
+			
+			//trasladar el elemento a la caja
+			document.getElementById('capa').prepend(nuevoNodo);//coloca en nodo en la caja #capa
+			//borra contenido de la caja 
+			document.getElementById('capa').innerHTML=''; //empty  borra contenido que haya en #capa
+
+		}
+	</script>
+</head>
+<body>
+	<main>
+		<div id="capa">
+			<a href='#' onclick="metodoJS()">Pulsa en este enlace</a>
+		</div>
+	</main>
+
+</body>
+</html>
